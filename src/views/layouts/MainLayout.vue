@@ -53,7 +53,7 @@ function gotoPage(path) {
           <!-- aside -->
           <aside v-if="screenWidth >= 768">
             <section class="aside_layout">
-              <Button label="張貼動態" class="aside_button" @click="gotoPage('/createPost')" />
+              <Button label="張貼動態" class="aside_button" @click="gotoPage('/posts/create')" />
               <div class="">
                 <Menu :model="navList">
                   <template #item="{ item, props }">
@@ -97,7 +97,7 @@ function gotoPage(path) {
                   icon="pi pi-plus"
                   rounded
                   aria-label="Home"
-                  @click="gotoPage('/createPost')"
+                  @click="gotoPage('/posts/create')"
                 />
               </div>
             </template>

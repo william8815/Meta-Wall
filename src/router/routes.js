@@ -2,15 +2,20 @@ export const routes = [
   {
     path: '/',
     component: () => import('../views/layouts/MainLayout.vue'),
+    redirect: { name: 'get-posts' }
+  },
+  // user
+  {
+    path: '/posts',
+    component: () => import('../views/layouts/MainLayout.vue'),
     children: [
-      // posts
       {
-        path: 'posts',
+        path: '/posts',
         name: 'get-posts',
         component: () => import('../views/GetPosts.vue')
       },
       {
-        path: 'createPost',
+        path: 'create',
         name: 'create-post',
         component: () => import('../views/CreatePost.vue')
       }
