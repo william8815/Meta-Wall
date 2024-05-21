@@ -1,1 +1,5 @@
 @import './base.css';
+@import 'primeicons/primeicons.css';
+.p-toolbar-group-center {
+  width: 100% !important;
+}
